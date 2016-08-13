@@ -1,0 +1,14 @@
+myApp.controller("thanksCtrl",function($scope,$http){
+	$http.get("../js/resume.json")
+		.success(function(response){
+			$scope.more=response.more;
+			$scope.work1=response.works1.name;
+			$scope.miaoshu1=response.works1.miaoshu;
+			$scope.work2=response.works2.name;
+			$scope.miaoshu2=response.works2.miaoshu;
+			$scope.work3=response.works3.name;
+			$scope.miaoshu3=response.works3.miaoshu;
+			$scope.work4=response.works4.name;
+			$scope.miaoshu4=response.works4.miaoshu;
+		})
+})
